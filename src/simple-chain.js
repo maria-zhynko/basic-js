@@ -13,7 +13,7 @@ const chainMaker = {
   removeLink(position) {
     if (!this.arr[position - 1] || !Number.isInteger(position)) {
       this.arr.length = 0;
-      throw new CustomError();
+      throw new Error();
     }
     this.arr.splice(position - 1, 1);
     return this;
